@@ -14,10 +14,7 @@ function App() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setUserInputs((oldInputs) => {
-      const newInputs = { ...oldInputs, [name]: +value };
-      return newInputs;
-    });
+    setUserInputs((oldInputs) => ({ ...oldInputs, [name]: +value }));
   };
 
   return (
